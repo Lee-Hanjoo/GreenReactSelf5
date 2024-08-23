@@ -1,38 +1,122 @@
-.App {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.wrap {
+  padding: 40px;
+}
+.box {
+  border: 1px solid #000;
+  position: relative;
+}
+
+
+#plusBtn {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  border-radius: 4px;
+  border: 2px solid black;
+  font-size: 32px;
+  line-height: 32px;
+  color: black;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+#plusBtn:hover {
+  color:white;
+  background-color: black;
+}
+
+.box h1 {
+  padding: 40px;
+  background-color: aquamarine;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.box h1 span {
+  font-size: 40px;
+}
+.box ul {
+  padding: 20px;
+  height: 400px;
+}
+.box ul li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 8px 0;
+}
+.box ul li:not(:first-of-type) {
+  border-top: 1px solid #afafaf;
+}
+.box ul li .note {
+  width: calc(100% - 50%);
+  margin-left: 12px;
+}
+.box ul li .in-or-out {
+  width: 80px;
+}
+.box ul li.in .in-or-out, .box ul li.in .amount {
+  color: blue;
+}
+.box ul li.out .in-or-out, .box ul li.out .amount {
+  color: red;
+}
+.box ul li .amount {
+  margin-left: auto;
+  width: 100px;
+  text-align: right;
+}
+.popup {
+  display: none;
+  position: absolute;
+  right: 70px;
+  top: 80px;
+  border: 1px solid #000;
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
   text-align: center;
+  z-index: 999;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.popup.on {
+  display: block;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#closeBtn {
+  position: absolute;
+  right: 12px;
+  top: 12px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.inputs {
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
-
-.App-link {
-  color: #61dafb;
+.inputs input {
+  height: 32px;
+  text-align: center;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.inputs input:first-of-type {
+  margin-bottom: 4px;
+}
+.btns {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.btns button {
+  width: calc(50% - 2px);
+  height: 40px;
 }
