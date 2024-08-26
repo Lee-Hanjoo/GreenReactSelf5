@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.wrap {
+  padding: 40px;
+}
+.box {
+  border: 1px solid #000;
+  position: relative;
+}
+
+
+#plusBtn {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  border-radius: 4px;
+  border: 2px solid black;
+  font-size: 32px;
+  line-height: 32px;
+  color: black;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+#plusBtn:hover {
+  color:white;
+  background-color: black;
+}
+
+.box h1 {
+  padding: 40px;
+  background-color: aquamarine;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.box h1 span {
+  font-size: 40px;
+}
+.box ul {
+  padding: 20px;
+  height: 400px;
+}
+.box ul li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 8px 0;
+}
+.box ul li:not(:first-of-type) {
+  border-top: 1px solid #afafaf;
+}
+.box ul li .note {
+  width: calc(100% - 50%);
+  margin-left: 12px;
+}
+.box ul li .in-or-out {
+  width: 80px;
+}
+.box ul li.in .in-or-out, .box ul li.in .amount {
+  color: blue;
+}
+.box ul li.out .in-or-out, .box ul li.out .amount {
+  color: red;
+}
+.box ul li .amount {
+  margin-left: auto;
+  width: 100px;
+  text-align: right;
+}
+.popup {
+  display: none;
+  position: absolute;
+  right: 70px;
+  top: 80px;
+  border: 1px solid #000;
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  z-index: 999;
+}
+.popup.on {
+  display: block;
+}
+#closeBtn {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+}
+.inputs {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.inputs input {
+  height: 32px;
+  text-align: center;
+}
+.inputs input:first-of-type {
+  margin-bottom: 4px;
+}
+.btns {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.btns button {
+  width: calc(50% - 2px);
+  height: 40px;
+}
